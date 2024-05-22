@@ -68,8 +68,8 @@ static void BM_gpu_addition(benchmark::State& state) {
         cudaDeviceSynchronize();
     }
 
-    assert(cudaMemcpy(c, cuda_c, sizeof(c), cudaMemcpyDeviceToHost) == cudaSuccess);
     // copy back to host
+    assert(cudaMemcpy(c, cuda_c, sizeof(c), cudaMemcpyDeviceToHost) == cudaSuccess);
 }
 
 
